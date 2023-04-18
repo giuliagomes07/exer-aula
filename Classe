@@ -1,0 +1,98 @@
+
+Classe ContaBanco
+//Atributos
+publico numConta: Interiro
+protegido tipo: Caractere
+Privado dono: Caractere
+privado saldo: Real
+privado status: Logico
+
+//métodos
+publico Metodo abrirConta(t: Caractere)
+ setTipo(t)
+ setStatus(verdadeiro)
+se(t = "CC") entao
+   saldo=50
+senao se(t = "CP") entao 
+  saldo = 150
+ FimSe
+FimMetodo
+
+publico Metodo fecharConta()
+se(saldo > 0) entao
+ Escreva("Conta com din din")
+senao se(saldo > 0) entao 
+  Escreva("Conta sem din din, em debito")
+senao
+   setStatus(false)
+ FimSe
+FimMetodo
+
+publico Metodo depositar(v:real)
+  se (status = verdadeiro) entao
+      setSaldo(getSaldo() + v)
+senao
+    Escreva("Impossivel depositar") 
+FimSe
+FimMetodo
+
+publico Metodo sacar(v:real)
+ se (status = verdadeiro) entao
+      se (saldo > v) entao
+      saldo = saldo - v
+senao
+   Escreva("Saldo insuficiente")
+FimSe
+senao
+   Escreva("Impossivel Sacar")
+FimSe
+FimMetodo
+
+publico Metodo pagarMensal()
+   var v: real
+   se (tipo= "CC") entao
+       v = 12
+   senao se (tipo ="CP") entao
+       v = 20
+FimSe
+se (Status=  verdadeiro) entao
+  se(Saldo > v) entao
+     saldo= saldo -v 
+senao
+   Escreva("Saldo insuficiente")
+FimSe
+senao
+   Escreva("Impossivel Sacar")
+FimSe
+FimMetodo
+
+//Métodos Especiais
+publico Metodo Construtor()
+  saldo = 0
+  status = falso
+FimMetodo
+publico Metodo setNumConta(n:Inteiro)
+    numConta = n
+publico Metodo getNumConta()
+    retorne numConta
+FimMetodo
+publico Metodo setTipo(t: Caractere)
+     tipo = t
+publico Metodo getTipo()
+        retorne tipo
+FimMetodo
+publico Metodo setDono(d: Caractere)
+     Dono = d
+publico Metodo getDono()
+        retorne dono
+FimMetodo
+publico Metodo setSaldo(s: real)
+    saldo = s
+publico Metodo getSaldo()
+        retorne saldo
+FimMetodo
+publico Metodo setStatus(s:Logico)
+     status = s
+publico Metodo getStatus()
+        retorne status
+FimMetodo
