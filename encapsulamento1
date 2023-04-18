@@ -1,0 +1,31 @@
+classe ControleRemoto
+
+//atributos
+privado inteiro volume
+privado logico ligado
+privado logico tocando
+// Métodos Especiais
+publico Métodos Construtor()
+  volume = 50 
+  ligado = falso
+  tocaado = falso
+FimMetodo
+privado Metodo getVolume()
+ retorne volume
+FimMetodo
+privado Metodo getLigado()
+ retorne volume
+FimMetodo
+privado Metodo getTocando()
+ retorne volume
+FimMetodo
+privado Metodo setVolume(v:Inteiro)
+  volume = v
+FimMetodo
+privado Metodo setLigado(l:logico)
+  ligado = l
+FimMetodo
+privado Metodo setTocando(t:logico)
+  tocando = t
+FimMetodo
+FimClasse
