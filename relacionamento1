@@ -1,0 +1,68 @@
+classe Lutador
+//Atributos
+privado nome: Caractere
+privado nacionalidade: Caractere
+privado idade: Interio
+privado altura: Real
+privado peso: Real
+privado categoria: Caractere
+privado vitorias: Inteiro
+privado derrotas: Interio
+privado empates: Inteiro
+//metodos
+publico metodo apresentar()
+
+fim metodo
+publico metodo Status()
+
+fim metodo
+publico metodo aganharLuta()
+
+fim metodo
+publico metodo perderLuta()
+
+fim metodo
+publico metodo empatarLuta()
+
+fim metodo
+
+//metodos especiais
+publico metodo construtor(no:Caractere, na:Caractere, id:Interio, al:Real, pe:Real, vi:Inteiro, de:Interio,em:Interio)
+nome = no
+nacionalidade = na
+idade = id
+altura = al
+SetPeso(pe) 
+vitorias = vi
+derrotas = de
+empates = em
+Fim metodo
+
+publico metodo getNome()
+retorne nome
+Fim metodo
+publico metodo setNome(no:Caractere)
+    nome = no
+Fim metodo
+publico metodo getPeso()
+retorne peso
+Fim metodo
+publico metodo setPeso()
+   peso = pe
+   setCategoria()
+Fim metodo
+ publico metodo setCategoria()
+  se(peso<52.2)entao
+  categoria = "Invalido"
+senao se(peso<=70.3)entao
+    categoria = "leve"
+senao se(peso<=83.9)entao
+    categoria ="medio"
+senao se(peso<=120.)entao
+    categoria ="pesado"
+senao 
+    categoria ="invalido"
+fim se
+Fim metodo
+
+FimClasse
