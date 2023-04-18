@@ -1,0 +1,42 @@
+classe ControleRemoto implementa Controlador
+// sobescrevendo Métodos
+publico abstrato Metodo ligar()
+  setLigado(verdadeiro)
+
+FimMetodo
+publico abstrato Metodo desligar()
+  setLigado(falso)
+
+FimMetodo
+publico abstrato Metodo abrirMenu()
+   Escreva(getLigado())
+   Escreva(getVolume())
+   Para i = 0 ate getVolume() passo 10 faca
+         Escreva("|")
+   FimPara
+Escreva(getTocando())
+FimMetodo
+publico abstrato Metodo fecharMenu()
+Escreva("Fechando o menu")
+FimMetodo
+publico abstrato Metodo maisVolume()
+ Se (getLigado()) entao
+   setVolume(getVolume() + 1)
+FimSe
+FimMetodo
+publico abstrato Metodo menosVolume()
+  Se (getLigado()) entao
+   setVolume(getVolume() - 1)
+FimSe
+FimMetodo
+publico abstrato Metodo ligarMudo()
+  Se (getLigado() e getVolume(getVolume() > 0) entao
+   setVolume(0)
+FimSe
+FimMetodo
+publico abstrato Metodo desligarMudo()
+Se (getLigado() e getVolume(getVolume() > 0) entao
+   setVolume(50)
+  FimSe
+FimMetodo
+FimClasse
